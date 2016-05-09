@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BlockedLaneMap</title>
+	<link rel="stylesheet" media="all" href="http://blocked-lane-map.herokuapp.com/assets/application-655eb73d896e576fcc0574bc248773c21d58607aa841ce2c1d7a95f59865923e.css" data-turbolinks-track="true" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/MarkerCluster.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/MarkerCluster.Default.css" />
+	<script src="http://blocked-lane-map.herokuapp.com/assets/application-7cbded9d8fcdd6c8587922e6b5327e8fca6bc3f2b8856b2035a8282ea6488de5.js" data-turbolinks-track="true"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/leaflet.markercluster-src.js"></script>
+	<meta name="csrf-param" content="authenticity_token" />
+	<meta name="csrf-token" content="u8h1zZ59wgrxybfDV4siaaOIsaIAJhhCmX4RFlHoCNEOOQYOxvPXa27CNxjrTXs37Cfeal9r62FnyrZQA6lTOg==" />
+</head>
+<body>
+
+<h1>Unblock the Lanes</h1>
+<div id="map" style="height: 500px;">
+
+</div>
+<script>
+	var map = L.map('map').setView([33.7490, -84.3880], 12);
+
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	var markers = L.markerClusterGroup({
+		polygonOptions: {opacity: 0.3,
+			weight: 3}
+	});
+
+	L.marker([33.767125, -84.36014444444444]).addTo(markers)
+			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/001/original/bike-test.JPG?1462757854/>")
+			.openPopup();
+
+	L.marker([33.767125, -84.36014444444444]).addTo(markers)
+			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/002/original/bike-test.JPG?1462758083/>")
+			.openPopup();
+
+	L.marker([33.767125, -84.36014444444444]).addTo(markers)
+			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/003/original/bike-test.JPG?1462758244/>")
+			.openPopup();
+
+	L.marker([33.767125, -84.36014444444444]).addTo(markers)
+			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/004/original/bike-test.JPG?1462758246/>")
+			.openPopup();
+
+	L.marker([33.767125, -84.36014444444444]).addTo(markers)
+			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/005/original/bike-test.JPG?1462758263/>")
+			.openPopup();
+
+	L.marker([33.784511111111115, -84.41160555555557]).addTo(markers)
+			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/006/original/IMG_2370.JPG?1462765529/>")
+			.openPopup();
+
+	L.marker([33.74991111111111, -84.37956944444444]).addTo(markers)
+			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/007/original/IMG_2148.JPG?1462765630/>")
+			.openPopup();
+
+	L.marker([33.75423611111111, -84.36543055555555]).addTo(markers)
+			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/008/original/IMG_20151209_135710.jpg?1462801775/>")
+			.openPopup();
+
+	L.marker([33.760219444444445, -84.38611666666667]).addTo(markers)
+			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/009/original/IMG_2130.JPG?1462804048/>")
+			.openPopup();
+
+	map.addLayer(markers);
+
+</script>
+
+</body>
+</html>
