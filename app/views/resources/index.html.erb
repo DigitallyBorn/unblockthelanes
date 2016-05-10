@@ -18,9 +18,11 @@
 	});
 
 	<% @images.each do |image| %>
-		L.marker([<%= image.latitude %>, <%= image.longitude %>]).addTo(map)
+		L.marker([<%= image.latitude %>, <%= image.longitude %>]).addTo(markers)
 				.bindPopup("<img style='width: 100%;' src=<%= image.file.url %>/>")
 				.openPopup();
 		<%= %>
 	<% end %>
+
+	map.addLayer(markers);
 </script>
