@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   resources :emails
   mount_griddler
 
+  namespace :api, module: :api, defaults: { format: :json } do
+     resources :images, only: [:index]
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

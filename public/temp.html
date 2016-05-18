@@ -11,9 +11,29 @@
 	<meta name="csrf-token" content="u8h1zZ59wgrxybfDV4siaaOIsaIAJhhCmX4RFlHoCNEOOQYOxvPXa27CNxjrTXs37Cfeal9r62FnyrZQA6lTOg==" />
 </head>
 <body>
+<style>
+	.custom .leaflet-popup-tip,
+	.custom .leaflet-popup-content-wrapper {
+		color: #ffffff;
+		border-radius: 5px;
+	}
+	
+	.leaflet-popup-content {
+		margin: 0;
+		
+	}
+	
+	.leaflet-popup-content-wrapper img {
+		width: 400px;
+		
+	}
+	
+	
 
+</style>
 <h1>Unblock the Lanes</h1>
 <div id="map" style="height: 500px;">
+<div class="marker"></div>
 
 </div>
 <script>
@@ -25,45 +45,50 @@
 		maxZoom: 19
 	}).addTo(map);
 
+	var customOptions =
+	{
+		'className' : 'custom'
+	}
+
 	var markers = L.markerClusterGroup({
 		polygonOptions: {opacity: 0.3,
 			weight: 3}
 	});
 
 	L.marker([33.767125, -84.36014444444444]).addTo(markers)
-			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/001/original/bike-test.JPG?1462757854/>")
+			.bindPopup("<img style='width: 200px;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/001/original/bike-test.JPG?1462757854/>", customOptions)
 			.openPopup();
 
 	L.marker([33.767125, -84.36014444444444]).addTo(markers)
-			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/002/original/bike-test.JPG?1462758083/>")
+			.bindPopup("<img style='width: 200px;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/002/original/bike-test.JPG?1462758083/>", customOptions)
 			.openPopup();
 
 	L.marker([33.767125, -84.36014444444444]).addTo(markers)
-			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/003/original/bike-test.JPG?1462758244/>")
+			.bindPopup("<img style='width: 200px;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/003/original/bike-test.JPG?1462758244/>", customOptions)
 			.openPopup();
 
 	L.marker([33.767125, -84.36014444444444]).addTo(markers)
-			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/004/original/bike-test.JPG?1462758246/>")
+			.bindPopup("<img style='width: 200px;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/004/original/bike-test.JPG?1462758246/>", customOptions)
 			.openPopup();
 
 	L.marker([33.767125, -84.36014444444444]).addTo(markers)
-			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/005/original/bike-test.JPG?1462758263/>")
+			.bindPopup("<img style='width: 200px;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/005/original/bike-test.JPG?1462758263/>", customOptions)
 			.openPopup();
 
 	L.marker([33.784511111111115, -84.41160555555557]).addTo(markers)
-			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/006/original/IMG_2370.JPG?1462765529/>")
+			.bindPopup("<img style='width: 200px;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/006/original/IMG_2370.JPG?1462765529/>", customOptions)
 			.openPopup();
 
 	L.marker([33.74991111111111, -84.37956944444444]).addTo(markers)
-			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/007/original/IMG_2148.JPG?1462765630/>")
+			.bindPopup("<img style='width: 200px;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/007/original/IMG_2148.JPG?1462765630/>", customOptions)
 			.openPopup();
 
 	L.marker([33.75423611111111, -84.36543055555555]).addTo(markers)
-			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/008/original/IMG_20151209_135710.jpg?1462801775/>")
+			.bindPopup("<img style='width: 200px;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/008/original/IMG_20151209_135710.jpg?1462801775/>", customOptions)
 			.openPopup();
 
 	L.marker([33.760219444444445, -84.38611666666667]).addTo(markers)
-			.bindPopup("<img style='width: 100%;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/009/original/IMG_2130.JPG?1462804048/>")
+			.bindPopup("<img style='width: 200px;' src=http://s3-us-west-2.amazonaws.com/blocked-lane-images/images/files/000/000/009/original/IMG_2130.JPG?1462804048/>", customOptions)
 			.openPopup();
 
 	map.addLayer(markers);
