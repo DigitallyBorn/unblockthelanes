@@ -1,0 +1,4 @@
+h1 Map
+div
+  select(ng-model='vm.selectedState', ng-change='vm.onStateChange()', ng-options='state.name for state in vm.states')
+div(style='height: 100vh;', id='map')
