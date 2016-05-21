@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html data-ng-app="app">
-<head>
+<html lang="en">
+  <head>
     <title>Unblock the Lanes</title>
-    <link rel="stylesheet" href="assets/styles.css"/>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.css' rel='stylesheet' />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script src="assets/vendor/angular.js"></script>
-    <script src="assets/vendor/angular-ui-router.js"></script>
-    <script src="assets/vendor/ui-bootstrap-custom-tpls-1.3.2.js"></script>
-    <script src="assets/templates.js"></script>
-    <script src="assets/index.js"></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
-</head>
-<body>
-<h1>Base Route</h1>
-<div ui-view=""></div>
-</body>
+    <!--link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/MarkerCluster.css')-->
+    <!--link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/MarkerCluster.Default.css')-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/stylesheets/styles.css">
+  </head>
 </html>
+<body>
+  <h1>map</h1>
+  <h2>da map</h2>
+  <div id="map" height="500px"></div>
+  <script src="assets/javascripts/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/leaflet.markercluster-src.js"></script>
+  <script src="assets/javascripts/index.js"></script>
+</body>
