@@ -3,7 +3,7 @@ class Image < ActiveRecord::Base
   has_attached_file :file,
                     :storage => :s3,
                     :bucket => "blocked-lane-images",
-                    :styles => {:thumb => "x200"}
+                    :styles => {:thumb => "x300"}
   after_file_post_process  :post_process_photo
   validates_attachment_content_type :file, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
