@@ -2,7 +2,8 @@ class Image < ActiveRecord::Base
   belongs_to :email
   has_attached_file :file,
                     :storage => :s3,
-                    :bucket => "blocked-lane-images"
+                    :bucket => "blocked-lane-images",
+                    :styles => {:thumb => "x200"}
   after_file_post_process  :post_process_photo
   validates_attachment_content_type :file, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
