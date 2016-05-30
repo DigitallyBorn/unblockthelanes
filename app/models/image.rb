@@ -13,6 +13,6 @@ class Image < ActiveRecord::Base
     self.time = imgfile.date_time
     self.longitude = imgfile.gps.longitude
     self.latitude = imgfile.gps.latitude
-    self.address = Geocoder.address(self.latitude.to_f, self.longitude.to_f)
+    self.address = Geocoder.address([self.latitude.to_f, self.longitude.to_f])
   end
 end
