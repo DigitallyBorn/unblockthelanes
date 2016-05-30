@@ -5,4 +5,5 @@ json.data @images.each do |image|
   json.longitude image.longitude
   json.latitude image.latitude
   json.created_at image.file_updated_at
+  json.address image.address
 end
