@@ -4,6 +4,6 @@ json.data @images.each do |image|
   json.thumb_url image.file.url(:thumb)
   json.longitude image.longitude
   json.latitude image.latitude
-  json.created_at image.file_updated_at
+  json.created_at image.time
   json.address image.address
 end
