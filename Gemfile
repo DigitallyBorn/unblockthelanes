@@ -21,6 +21,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'photo_geoloader'
 gem 'exifr'
 gem 'leaflet-rails'
+gem 'geocoder'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
