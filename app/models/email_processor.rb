@@ -6,6 +6,7 @@ class EmailProcessor
     new_email = Email.new
     new_email.body = @email.body
     new_email.email = @email.from
+    new_email.subject = @email.subject
     if new_email.save
       @email.attachments.each do |attachment|
         image = Image.new
