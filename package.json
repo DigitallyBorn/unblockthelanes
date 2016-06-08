@@ -18,7 +18,8 @@
   "bugs": {
     "url": "https://github.com/jordanstreiff/unblockthelanes/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "1.8.0",

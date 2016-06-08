@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+head
+  title Unblock the Lanes
+  link(rel='stylesheet', href='vendor/leaflet.awesome-markers.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/MarkerCluster.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/MarkerCluster.Default.css')
+  link(rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.light.min.css")
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css')
+  link(rel='stylesheet', href='styles/styles.css')
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js')
+body
+  #close-menu.fa.fa-times.fa-lg(href="#close-menu")
+  #sidr-right
+    #image
+    .content
+      strong Time
+      p#time
+      strong Location
+      p#address
+      
+  #map
+  script(src='vendor/leaflet.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/leaflet.markercluster-src.js')
+  script(src='vendor/leaflet.awesome-markers.js')
+  script(src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js")
+  script(src='scripts/index.js')
