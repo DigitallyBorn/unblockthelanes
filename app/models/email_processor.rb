@@ -5,7 +5,7 @@ class EmailProcessor
   def process
     new_email = Email.new
     new_email.body = @email.body
-    new_email.email = @email.from
+    new_email.email = @email.from.email
     new_email.subject = @email.subject
     puts 'email!!! ' + new_email.email
     if new_email.save
@@ -19,9 +19,9 @@ class EmailProcessor
         end
       end
       if image_successful
-        ImageMailer.success_email(new_email.email).deliver_later
+        ImageMailer.success_email(new_email.from).deliver_later
       else
-        ImageMailer.fail_email(new_email.email).deliver_later
+        ImageMailer.fail_email(new_email.from).deliver_later
       end
     end
   end
