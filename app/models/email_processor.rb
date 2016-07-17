@@ -3,11 +3,11 @@ class EmailProcessor
     @email = email
   end
   def process
-    puts 'email!!! ' + @email.from
     new_email = Email.new
     new_email.body = @email.body
     new_email.email = @email.from
     new_email.subject = @email.subject
+    puts 'email!!! ' + new_email.email
     if new_email.save
       image_successful = false
       @email.attachments.each do |attachment|
@@ -19,9 +19,9 @@ class EmailProcessor
         end
       end
       if image_successful
-        ImageMailer.success_email(@email.from).deliver_later
+        ImageMailer.success_email(new_email.email).deliver_later
       else
-        ImageMailer.fail_email(@email.from).deliver_later
+        ImageMailer.fail_email(new_email.email).deliver_later
       end
     end
   end
