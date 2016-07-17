@@ -12,9 +12,7 @@
   <tbody>
     <% @images.each do |image| %>
       <tr>
-		  <% if image.thumb_url %>
-	  	<td><img src='<%= image.thumb_url %>'/></td>
-		  <% end %>
+	  	<td><img src='<%= image.file.url(:thumb) %>'/></td>
         <td><%= link_to 'Show', image %></td>
         <td><%= link_to 'Edit', edit_image_path(image) %></td>
         <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
