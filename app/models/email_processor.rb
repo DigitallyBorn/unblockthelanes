@@ -19,9 +19,9 @@ class EmailProcessor
         end
       end
       if image_successful
-        ImageMailer.success_email(new_email.from).deliver_later
+        ImageMailer.success_email(new_email.email).deliver_later
       else
-        ImageMailer.fail_email(new_email.from).deliver_later
+        ImageMailer.fail_email(new_email.email).deliver_later
       end
     end
   end
