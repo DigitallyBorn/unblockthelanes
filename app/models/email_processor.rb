@@ -3,6 +3,7 @@ class EmailProcessor
     @email = email
   end
   def process
+    puts 'email!!! ' + @email.from
     new_email = Email.new
     new_email.body = @email.body
     new_email.email = @email.from
