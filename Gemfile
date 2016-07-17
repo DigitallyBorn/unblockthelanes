@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'griddler'
 gem 'griddler-postmark'
+gem 'postmark-rails', '~> 0.13.0'
 gem 'pg'
 
 gem 'paperclip'
