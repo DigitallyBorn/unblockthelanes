@@ -5,7 +5,7 @@ class EmailProcessor
   def process
     new_email = Email.new
     new_email.body = @email.body
-    new_email.email = @email.from.email
+    new_email.email = @email.from[:email]
     new_email.subject = @email.subject
     puts 'email!!! ' + new_email.email
     if new_email.save
