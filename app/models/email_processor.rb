@@ -7,7 +7,6 @@ class EmailProcessor
     new_email.body = @email.body
     new_email.email = @email.from[:email]
     new_email.subject = @email.subject
-    puts 'email!!! ' + new_email.email
     if new_email.save
       image_successful = false
       @email.attachments.each do |attachment|
