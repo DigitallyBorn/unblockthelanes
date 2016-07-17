@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'application#index'
 
   resources :emails
+  resources :images
   mount_griddler
 
   namespace :api, module: :api, defaults: { format: :json } do
